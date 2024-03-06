@@ -71,12 +71,12 @@ async def delete_task(task_id: int):
 
 # Define the async function
 async def my_async_function():
-    task = asyncio.create_task(inner_async_function())
-    
     # Your asynchronous code here
 
 # Create a task to run the coroutine in the existing event loop
 task = asyncio.create_task(my_async_function())
+
+# Do other synchronous tasks if needed
 
 # Wait for the task to complete
 await task
