@@ -1,6 +1,6 @@
 fastapi==0.68.0
-databases==0.5.3
-sqlalchemy==1.4.30
-aiosqlite==0.21.0
+uvicorn==0.15.0
+gunicorn==20.1.0
+
 
 
