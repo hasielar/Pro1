@@ -7,6 +7,7 @@ app = FastAPI()
 class Task(BaseModel):
     id: int
     title: str
+    description: str  # Add a description field
     completed: bool
 
 tasks = []
