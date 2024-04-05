@@ -1,11 +1,5 @@
-FROM python:3.9-slim
+FROM tiangolo/uvicorn-gunicorn-fastapi:python3.9
 
-WORKDIR /app
+COPY ./app /app
 
-COPY requirements.txt requirements.txt
-
-RUN pip install -r requirements.txt
-
-COPY . .
-
-CMD ["gunicorn", "-k", "uvicorn.workers.UvicornWorker", "main:app", "--bind", "0.0.0.0:8000"]
+RUN pip install -r /app/requirements.txt
